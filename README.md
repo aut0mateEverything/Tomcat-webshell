@@ -1,3 +1,6 @@
+![banner](img/my_script_shell.png)
+
+
 # ☢️ Tomcat WAR File Uploader
 
 A Python tool to upload `.war` web shells to Apache Tomcat via the Manager interface (`/manager/html`). Automatically handles CSRF protection and session cookies.
